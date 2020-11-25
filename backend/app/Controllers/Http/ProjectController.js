@@ -1,5 +1,6 @@
 'use strict'
 
+const AuthorizationService = use('App/Services/AuthorizationService');
 const Project = use('App/Models/Project');
 
 class ProjectController {
@@ -25,9 +26,7 @@ class ProjectController {
         const user = await auth.getUser();
         const {id} = params;
         const project = await Project.find(id);
-          if(project.user_id !== user.id){
-              return response.status(403);
-          } 
+        AuthorizationService.verifyPermission(project,user);
         await project.delete();
         return project;  
     }
@@ -37,10 +36,11 @@ class ProjectController {
         const user = await auth.getUser();
         const {id} = params;
         const project = await Project.find(id);
-
-        //TODO: implement another method for errors
-
-        project.merge(request.only('title', 'shortdescription'));
+        AuthorizationService.verifyPermission(project,user);
+        project.merge(request.only([
+            'title',
+            'shortdescription'
+        ]));
         await project.save();
         return project;
     }
