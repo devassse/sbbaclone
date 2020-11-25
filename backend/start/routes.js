@@ -16,6 +16,18 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
+/** Just for Funny, I will use this to Say its Illegal - 606, to use direct acess */
 Route.get('/', () => {
-  return { greeting: 'SBBA Clone App' }
+  return { illegal: '606 - Do not do That Again' }
 })
+
+/**
+ * Routes Used to Navigate Into de api, Possibility to use different prefixs
+ * 
+ * v0 - First Version || Under Develpment
+*/
+Route.group(() => {
+  Route.post('auth/register', 'UserController.register');
+  Route.post('auth/login', 'UserController.login');
+})
+.prefix('api/v0');
