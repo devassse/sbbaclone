@@ -6,12 +6,12 @@
       <header class="app-main-header">
         <div class="wrapper">
           <!-- imported navbar -->
-          <navbar />
+          <Navbar />
           <!--/ imported aside -->
         </div>
       </header>
       <!-- imported aside -->
-      <aside />
+      <Aside />
       <!--/ imported aside -->
     </section>
     <!--/ Top and Aside Menu Container -->
@@ -47,6 +47,5 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 </style>
