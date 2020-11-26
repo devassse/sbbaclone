@@ -1,19 +1,44 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Hello world, I am in vue"/>
+    <!-- Top and Aside Menu Container -->
+    <section>
+      <!-- Header Section -->
+      <header class="app-main-header">
+        <div class="wrapper">
+          <!-- imported navbar -->
+          <navbar />
+          <!--/ imported aside -->
+        </div>
+      </header>
+      <!-- imported aside -->
+      <aside />
+      <!--/ imported aside -->
+    </section>
+    <!--/ Top and Aside Menu Container -->
+
+    <img
+      alt="Vue logo"
+      src="./assets/imgs/logos/sb-shield-02.png"
+      style="width: 20%"
+    />
+    <HelloWorld msg="Lorem ipsum dolor sit amet" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
+import Navbar from "./components/Navbar.vue";
+import Aside from "./components/Aside.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    HelloWorld,
+    Aside,
+    Navbar,
+    
+  },
+};
 </script>
 
 <style>
@@ -23,6 +48,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

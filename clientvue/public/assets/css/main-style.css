@@ -1,0 +1,57 @@
+/*=========================================================*
+*      Main Style Sheet
+*==========================================================*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.app-main-header {
+
+    border: 1px dotted #ffffff;
+    /* Do Nothing, just remove*/
+}
+
+.brand-link {
+    color: #3637e9 !important;
+    font-size: 1.5rem !important;
+    background-color: #ffffff;
+}
+
+.brand-link .brand-image {
+    margin-top: 1px !important;
+}
+
+.user-panel {
+    border-bottom: 1px solid #3637e9 !important;
+}
+
+.nav-header {
+    border-bottom: 1px solid #3637e9
+}
+
+.nav-pills .nav-link {
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -ms-border-radius: 0 !important;
+    -o-border-radius: 0 !important;
+}
+
+.sidebar {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: left;
+}
+
+.sidebar li a {
+    padding-left: 8%;
+}
+
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active,
+.sidebar-light-primary .nav-sidebar>.nav-item>.nav-link.active {
+    background-color: #4d9bf99e !important;
+}
+.nav-sidebar>.nav-item {
+    margin-bottom: 5px !important;
+}
