@@ -5,12 +5,19 @@
     margin: 0;
     padding: 0;
 }
+
+/**=========== Commum Styles =================*/
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-  }
+}
+
+#main-container {
+
+    border: 1px dotted transparent;
+}
 
 .app-main-header {
 
@@ -18,6 +25,7 @@
     /* Do Nothing, just remove*/
 }
 
+/**=========== Navibar Styles =================*/
 .brand-link {
     color: #3637e9 !important;
     font-size: 1.5rem !important;
@@ -44,6 +52,7 @@
     -o-border-radius: 0 !important;
 }
 
+/**=========== Aside Styles =================*/
 .sidebar {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -58,6 +67,7 @@
 .sidebar-light-primary .nav-sidebar>.nav-item>.nav-link.active {
     background-color: #4d9bf99e !important;
 }
+
 .nav-sidebar>.nav-item {
     margin-bottom: 5px !important;
 }
